@@ -1,0 +1,26 @@
+# Logs
+react-ts/logs
+react-ts/*.log
+react-ts/npm-debug.log*
+react-ts/yarn-debug.log*
+react-ts/yarn-error.log*
+react-ts/pnpm-debug.log*
+react-ts/lerna-debug.log*
+
+react-ts/node_modules
+react-ts/dist
+react-ts/dist-ssr
+react-ts/*.local
+
+node-ai/node_modules
+
+# Editor directories and files
+react-ts/.vscode/*
+react-ts/!.vscode/extensions.json
+react-ts/.idea
+react-ts/.DS_Store
+react-ts/*.suo
+react-ts/*.ntvs*
+react-ts/*.njsproj
+react-ts/*.sln
+react-ts/*.sw?
