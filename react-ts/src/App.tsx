@@ -1,6 +1,15 @@
 import { motion } from "framer-motion";
+import { client } from "./api/client";
 
 function App() {
+  const handleClick = async () => {
+    try {
+      const response = await client.get("/");
+      console.log(response.data);
+    } catch (error) {
+      console.error(error);
+    }
+  };
   return (
     <div className="full-screen items-center justify-center flex flex-col bg-white">
       <div className="h-2/3 w-1/2 justify-center items-center flex flex-col bg-gray-500">
@@ -17,6 +26,7 @@ function App() {
         <motion.button
           className="w-full h-28 bg-red-500"
           whileHover={{ backgroundColor: "rgba(239, 68, 68, 0.7)" }}
+          onClick={() => handleClick()}
         >
           fdf
         </motion.button>
