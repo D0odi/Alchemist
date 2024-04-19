@@ -1,14 +1,17 @@
 {
-  "name": "ai",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "node-ai",
+  "module": "index.ts",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "bun run --watch ./index.js "
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/express": "^4.17.21"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
   "dependencies": {
     "express": "^4.19.2"
   }

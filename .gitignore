@@ -24,3 +24,43 @@ react-ts/*.ntvs*
 react-ts/*.njsproj
 react-ts/*.sln
 react-ts/*.sw?
+
+# node-ai 
+node-ai/logs
+node-ai/_.log
+node-ai/npm-debug.log_
+node-ai/yarn-debug.log*
+node-ai/yarn-error.log*
+node-ai/lerna-debug.log*
+node-ai/.pnpm-debug.log*
+
+node-ai/.cache
+
+node-ai/node_modules/
+node-ai/jspm_packages/
+
+# Snowpack dependency directory (https://snowpack.dev/)
+
+node-ai/web_modules/
+
+# TypeScript cache
+
+node-ai/*.tsbuildinfo
+
+# Optional npm cache directory
+
+node-ai/.npm
+
+# Output of 'npm pack'
+
+node-ai/*.tgz
+
+node-ai/.env
+node-ai/.env.development.local
+node-ai/.env.test.local
+node-ai/.env.production.local
+node-ai/.env.local
+
+node-ai/.temp
+
+node-ai/.vscode-test
