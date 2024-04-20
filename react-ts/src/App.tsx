@@ -5,7 +5,7 @@ function App() {
   const handleClick = async () => {
     try {
       const response = await client.get("/");
-      console.log(response.data);
+      console.log(response.data.message);
     } catch (error) {
       console.error(error);
     }

@@ -4,6 +4,7 @@ import express, {
   type NextFunction,
   type Express,
 } from "express";
+import { ai } from "./ai";
 const cors = require("cors");
 const app: Express = express();
 
@@ -17,7 +18,7 @@ app.get(
   async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     try {
       res.status(200).json({
-        message: "Hurray!! we create our first server on bun js",
+        message: "server is on",
         success: true,
       });
     } catch (error: unknown) {
@@ -25,6 +26,19 @@ app.get(
     }
   }
 );
+
+app.get("/generate-item", async (req, res, next) => {
+  try {
+    const result = await ai.generateContent(
+      "pick a random item from a random rpg game and give me its description"
+    );
+    const response = await result.response;
+    const text = response.text();
+    res.status(200).json({ item: text, success: true });
+  } catch (error: unknown) {
+    next(new Error((error as Error).message));
+  }
+});
 
 app.listen(port, () => {
   console.log(`Server is up and running on port ${port}`);
