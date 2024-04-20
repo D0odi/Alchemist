@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const baseURL = "http://localhost:8080"; // https://express-looter-ai.onrender.com
+const baseURL = "http://localhost:8080"; // http://localhost:8080
 
 const client = axios.create({ baseURL });
 
@@ -13,11 +13,14 @@ const serverStatus = async (): Promise<void> => {
   }
 };
 
-const generateItem = async (): Promise<string | null> => {
+const generateItem = async (
+  sample_1: string,
+  sample_2: string
+): Promise<string | null> => {
   try {
     const response = await client.post("/generate-item", {
-      sample_1: "water",
-      sample_2: "dirt",
+      sample_1,
+      sample_2,
     });
 
     if (response.data.success) {

@@ -32,15 +32,15 @@ app.post("/generate-item", async (req, res, next) => {
   const { sample_1, sample_2 } = req.body;
   try {
     const result = await ai.generateContent(
-      `Generate a new item by combining the given items. Provide a brief description of the new item's properties.
+      `Generate a new item or a concept by combining the given items. Provide a brief description of the new item's properties. The item or concept should exist in the real world
 
-      Item 1: Sword
-      Item 2: Fire Gem
-      New Item: Flameblade Sword - A sword imbued with the power of fire. It deals additional fire damage to enemies and can ignite flammable objects on hit.
+      Item 1: Air
+      Item 2: Water
+      New Item: Cloud - a visible collection of water droplets, ice crystals, or other particles that float in the atmosphere.
       
-      Item 1: Healing Potion
-      Item 2: Frost Shard
-      New Item: Frostbite Tonic - A chilling potion that temporarily slows down enemies and reduces their movement speed upon contact. It also provides a minor healing effect.
+      Item 1: Swamp
+      Item 2: Energy
+      New Item: Life - a spark of self-sustaining complexity, capable of growth, adaptation, and reproduction.
       
       Item 1: ${sample_1}
       Item 2: ${sample_2}
